@@ -1,0 +1,25 @@
+package me.syncnationhd.arc;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+
+public class Help implements CommandExecutor
+{
+  private Main plugin;
+  
+  public Help(Main main)
+  {
+    plugin = main;
+  }
+  
+  public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("helpmsg1")));
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("helpmsg2")));
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("helpmsg3")));
+    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("helpmsg4")));
+    return true;
+  }
+}
