@@ -33,4 +33,4 @@ arcanum.die - Use the suicide command
 arcanum.chatclear - Use the chat-clear command
 
 Known Bugs:
-/die currently has issues. Please refer to errors stated in Console.Log()
+/die currently has issues. Please refer to errors stated in Console.Log().
